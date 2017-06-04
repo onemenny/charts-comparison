@@ -97,8 +97,8 @@ dashboardService = (
                 var timing = document.createElement("DIV");
                 timing.id = 'timing_' + i.toString();
 
-                body.appendChild(timing);
                 body.appendChild(title);
+                body.appendChild(timing);
                 body.appendChild(chart);
 
                 var start = new Date();
