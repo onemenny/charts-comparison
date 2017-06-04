@@ -97,9 +97,9 @@ dashboardService = (
                 var timing = document.createElement("DIV");
                 timing.id = 'timing_' + i.toString();
 
-                body.appendChild(chart);
                 body.appendChild(timing);
                 body.appendChild(title);
+                body.appendChild(chart);
 
                 var start = new Date();
                 renderCb && renderCb(chart.id, tile.series);
