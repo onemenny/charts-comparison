@@ -82,8 +82,35 @@ dashboardService = (
             //Hybrid
         ];
 
+        function generateTiles(renderCb) {
+            var body = document.getElementsByTagName("BODY")[0];
+            for (var i=0; i< tiles.length ; i++) {
+                var tile = tiles[i];
+
+                var title = document.createElement("DIV");
+                title.className = 'chart-title';
+                title.innerHTML = tile.description;
+
+                var chart = document.createElement("DIV");
+                chart.id = 'chart_' + i.toString();
+
+                var timing = document.createElement("DIV");
+                timing.id = 'timing_' + i.toString();
+
+                body.appendChild(chart);
+                body.appendChild(timing);
+                body.appendChild(title);
+
+                var start = new Date();
+                renderCb && renderCb(chart.id, tile.series);
+                var end = new Date();
+                timing.innerHTML = 'Graphs loaded in ' + ( end - start ) + ' ms.';
+            }
+        }
+
         return {
             tiles: tiles,
+            generateTiles: generateTiles,
         }
 
     }());

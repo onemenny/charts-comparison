@@ -1,0 +1,9 @@
+body {
+    padding: 20px;
+}
+
+.chart-title {
+    padding-top: 30px;
+    text-decoration: underline;
+    font-weight: 36px;
+}
