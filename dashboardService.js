@@ -33,7 +33,7 @@ dashboardService = (
                 series: (function getData() {
                     var res = [];
                     for (var i = 0; i < 10; i++) {
-                        res.push(generateSeriesObject(10000), null, colors[i]);
+                        res.push(generateSeriesObject(10000, null, colors[i]));
                     }
                     return res;
                 }()),
@@ -43,7 +43,7 @@ dashboardService = (
                 series: (function getData() {
                     var res = [];
                     for (var i = 0; i < 30; i++) {
-                        res.push(generateSeriesObject(10000), null, colors[i]);
+                        res.push(generateSeriesObject(10000, null, colors[i]));
                     }
                     return res;
                 }()),
@@ -63,7 +63,7 @@ dashboardService = (
                 series: (function getData() {
                     var res = [];
                     for (var i = 0; i < 10; i++) {
-                        res.push(generateSeriesObject(10000), 'column', colors[i]);
+                        res.push(generateSeriesObject(10000, 'column', colors[i]));
                     }
                     return res;
                 }()),
@@ -73,7 +73,7 @@ dashboardService = (
                 series: (function getData() {
                     var res = [];
                     for (var i = 0; i < 30; i++) {
-                        res.push(generateSeriesObject(10000), 'column', colors[i]);
+                        res.push(generateSeriesObject(10000, 'column', colors[i]));
                     }
                     return res;
                 }()),
