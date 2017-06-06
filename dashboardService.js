@@ -51,28 +51,28 @@ dashboardService = (
 
             //column charts
             {
-                description: 'single line chart 10,000 points',
-                series: [generateSeriesObject(10000), 'column'],
+                description: 'single column chart 10,000 points',
+                series: [generateSeriesObject(10000, 'column')],
             },
             {
-                description: 'single line chart 100,000 points',
-                series: [generateSeriesObject(100000), 'column'],
+                description: 'single column chart 50,000 points',
+                series: [generateSeriesObject(50000, 'column')],
             },
             {
-                description: '10 line chart 10,000 points each',
+                description: '5 column chart 10,000 points each',
                 series: (function getData() {
                     var res = [];
-                    for (var i = 0; i < 10; i++) {
+                    for (var i = 0; i < 5; i++) {
                         res.push(generateSeriesObject(10000, 'column', colors[i]));
                     }
                     return res;
                 }()),
             },
             {
-                description: '30 line chart 10,000 points each',
+                description: '10 column chart 10,000 points each',
                 series: (function getData() {
                     var res = [];
-                    for (var i = 0; i < 30; i++) {
+                    for (var i = 0; i < 10; i++) {
                         res.push(generateSeriesObject(10000, 'column', colors[i]));
                     }
                     return res;
